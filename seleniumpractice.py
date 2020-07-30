@@ -1,5 +1,7 @@
 from selenium import webdriver
 import time
+
+#browser
 browser = webdriver.Chrome('C:/Users/eklut/.wdm/drivers/chromedriver/win32/84'
                            '.0.4147.30/chromedriver.exe')
 browser.get('https://www.sportchek.ca/categories/shop-by-sport/fitness'
