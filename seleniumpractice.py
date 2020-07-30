@@ -1,4 +1,5 @@
 from selenium import webdriver
+import ezgmail
 import time
 
 #browser
@@ -10,11 +11,13 @@ browser.get('https://www.sportchek.ca/categories/shop-by-sport/fitness'
 browser.minimize_window()
 while True:
     try:
+        #if its out of stock, do nothing
         browser.find_element_by_class_name('out-of-stock')
-        print('it out of stock')
     except:
+        #else exit the loop
         print('it is in stock')
 
     browser.refresh()
-    time.sleep(60)
+    time.sleep(900)
 
+#send email saying that it's in stock
